@@ -44,5 +44,6 @@ public class Location {
 		if (Double.doubleToLongBits(y) != Double.doubleToLongBits(other.y))
 			return false;
 		return true;
+
 	}
 }
