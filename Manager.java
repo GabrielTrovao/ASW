@@ -9,6 +9,7 @@ import rsa.shared.UserStars;
 import java.util.*;
 
 public class Manager {
+	
 	private Users allUsers;
 	private Matcher matcher;
 	
@@ -28,16 +29,18 @@ public class Manager {
 	
 	//este está mal
 	public boolean authenticate(String nick, String password) {
-		User userTest = new User();
+		User userTest = new User(nick, null, password);
 		
-		if(userTest.getNick()nick.equals(nick) && userTest.getPassword())
+		if(userTest.authenticate(password))
+			return true;
+		return false;
 	}
 	
 	public void concludeRide(long rideId, UserStars classification) {
 		
 	}
 	
-	public double getAverage(java.lang.String nick, RideRole role) {
+	public double getAverage(String nick, RideRole role) {
 		
 	}
 	
@@ -45,11 +48,12 @@ public class Manager {
 		
 	}
 	
-	PreferredMatch getPreferredMatch(java.lang.String nick, java.lang.String password) {
+	PreferredMatch getPreferredMatch(String nick, String password) {
 		
 	}
 	
-	public boolean register(java.lang.String nick, java.lang.String name, java.lang.String password) {
+	//nao esta feito
+	public boolean register(String nick, String name,String password) {
 		User user1  = new User(nick,name,password);
 		
 		return true;
@@ -60,11 +64,12 @@ public class Manager {
 		
 	}
 	
-	void setPreferredMatch(java.lang.String nick, java.lang.String password, PreferredMatch preferred) {
+	void setPreferredMatch(String nick, String password, PreferredMatch preferred) {
 		
 	}
 	
-	public boolean updatePassword(java.lang.String nick, java.lang.String oldPassword, java.lang.String newPassword) {
+	public boolean updatePassword(String nick, String oldPassword,String newPassword) {
+		//User uti = new User(nick, null, new)
 		
 	}
 	
